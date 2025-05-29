@@ -25,10 +25,10 @@ This project uses the [Wikipedia Clickstream Dataset (January 2017)](https://dum
 ## Project Structure
 
 kafka-spark-streaming-pipeline/
-├── kafka_producer.py # Kafka producer sending clickstream data
-├── spark_consumer.py # Spark consumer processing Kafka stream
-├── sample_clickstream.tsv # Sample subset of the Clickstream dataset
-├── README.md # Documentation
+# ├── kafka_producer.py # Kafka producer sending clickstream data
+# ├── spark_consumer.py # Spark consumer processing Kafka stream
+# ├── sample_clickstream.tsv # Sample subset of the Clickstream dataset
+# ├── README.md # Documentation
 
 
 

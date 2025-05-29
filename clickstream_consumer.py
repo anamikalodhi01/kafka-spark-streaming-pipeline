@@ -40,34 +40,3 @@ query.awaitTermination()
 
 
 
-
-
-
-# from pyspark.sql import SparkSession
-
-# def main():
-#     spark = SparkSession.builder \
-#         .appName("KafkaClickstreamToParquet") \
-#         .getOrCreate()
-
-#     kafka_df = spark.readStream.format("kafka") \
-#         .option("kafka.bootstrap.servers", "localhost:9092") \
-#         .option("subscribe", "clickstream") \
-#         .load()
-
-#     # Convert Kafka binary value to string
-#     clickstream_df = kafka_df.selectExpr("CAST(value AS STRING) as message")
-
-#     query = (
-#         clickstream_df.writeStream
-#         .format("parquet")  # or "json", "csv"
-#         .option("path", "/tmp/clickstream_data")
-#         .option("checkpointLocation", "/tmp/clickstream_checkpoint")
-#         .trigger(processingTime="1 minute")  # batch interval
-#         .start()
-#     )
-
-#     query.awaitTermination()
-
-# if __name__ == "__main__":
-#     main()
